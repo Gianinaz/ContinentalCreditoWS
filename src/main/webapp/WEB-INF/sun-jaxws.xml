@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+    <endpoint implementation="py.com.bepsa.ws.ContinentalCreditoWS" name="ContinentalCreditoWS" url-pattern="/ContinentalCreditoWS"/>
+    <endpoint implementation="py.com.bepsa.ws.Tcservice_apvp737" name="tcservice_apvp737" url-pattern="/tcservice_apvp737"/>
+    <endpoint implementation="py.com.bepsa.ws.Tcservice_apvp932" name="tcservice_apvp932" url-pattern="/tcservice_apvp932"/>
+    <endpoint implementation="py.com.bepsa.ws.Tcservice_apvp009" name="tcservice_apvp009" url-pattern="/tcservice_apvp009"/>
+    <endpoint implementation="py.com.bepsa.ws.Tcservice_apvp002" name="tcservice_apvp002" url-pattern="/tcservice_apvp002"/>
+    <endpoint implementation="py.com.bepsa.ws.Tcservice_apvp002" name="tcservice_apvp002" url-pattern="/tcservice_apvp002"/>
+</endpoints>
