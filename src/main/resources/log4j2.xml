@@ -9,13 +9,15 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
-        <RollingFile name="FileAppender" fileName="/opt/tomcat/logConti/ContinentalCreditoWS.log" 
+        <RollingFile name="RollingFileAppender" fileName="/opt/tomcat/logConti/ContinentalCreditoWS.log" 
                      filePattern="/opt/tomcat/logConti/ContinentalCreditoWS-%d{yyyy-MM-dd}.log">
             <PatternLayout>
                 <Pattern>${LOG_PATTERN}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizeBasedTriggeringPolicy size="10MB" />
+                <OnStartupTriggeringPolicy />
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50MB" />
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
@@ -25,11 +27,11 @@
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
         <Logger name="py.com.bepsa" level="debug" additivity="false">
-            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="RollingFileAppender" />
         </Logger>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="RollingFileAppender" />
         </Root>
     </Loggers>
 </Configuration>
