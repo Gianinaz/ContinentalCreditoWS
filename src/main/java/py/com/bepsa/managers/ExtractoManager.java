@@ -7,8 +7,7 @@ package py.com.bepsa.managers;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.LineasDetalle;
 import py.com.bepsa.clases.RespExtracto;
 import py.com.bepsa.clases.TarConMovimientos;
@@ -24,7 +23,7 @@ import py.com.bepsa.utils.DBUtils;
  */
 public class ExtractoManager {
 
-    private static final Logger LOGGER = LogManager.getLogger(ExtractoManager.class);
+    private static final Logger LOGGER = Logger.getLogger(ExtractoManager.class.getName());
     public static boolean proceso;
     public static String MensajeError = "";
 

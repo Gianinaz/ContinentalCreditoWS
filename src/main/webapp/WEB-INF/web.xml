@@ -10,6 +10,15 @@
         <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
     <servlet>
+        <servlet-name>log4j-init</servlet-name>
+        <servlet-class>py.com.bepsa.utils.Log4jInit</servlet-class>
+        <init-param>
+            <param-name>log4j-init-file</param-name>
+            <param-value>/WEB-INF/log4j.properties</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet> 
+    <servlet>
         <servlet-name>ContinentalCreditoWS</servlet-name>
         <servlet-class>
             com.sun.xml.ws.transport.http.servlet.WSServlet

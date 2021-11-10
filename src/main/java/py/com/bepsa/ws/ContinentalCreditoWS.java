@@ -21,8 +21,7 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 import javax.xml.bind.annotation.XmlElement;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.ArchivoCuenta;
 import py.com.bepsa.clases.ArchivoTarjeta;
 import py.com.bepsa.clases.Cuenta;
@@ -55,7 +54,7 @@ public class ContinentalCreditoWS {
         Utils.obtenerPropiedades();
     }
 
-    private static final Logger LOGGER = LogManager.getLogger(ContinentalCreditoWS.class);
+    private static final Logger LOGGER = Logger.getLogger(ContinentalCreditoWS.class);
 
     @WebMethod(operationName = "abmCuentaTarjeta")
     public String abmCuentaTarjeta(@WebParam(name = "usuario") @XmlElement(required = true) String usuario,

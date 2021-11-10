@@ -10,8 +10,7 @@ import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.managers.RegrabacionManager;
 import py.com.bepsa.pojo.DatosEntrada;
 import py.com.bepsa.pojo.Regrabacion;
@@ -29,7 +28,7 @@ public class Tcservice_apvp737 {
     /**
      * This is a sample web service operation
      */
-    private static final Logger LOGGER = LogManager.getLogger(Tcservice_apvp737.class);
+    private static final Logger LOGGER = Logger.getLogger(Tcservice_apvp737.class);
 
     @WebMethod(operationName = "transferenciaRegrabacion")
     public String transferenciaRegrabacion(@WebParam(name = "usuario") String usuario,

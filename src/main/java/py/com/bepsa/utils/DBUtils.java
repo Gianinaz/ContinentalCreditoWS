@@ -20,8 +20,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.DatoTmoviaf;
 import py.com.bepsa.clases.LineasDetalle;
 import static py.com.bepsa.managers.RegrabacionManager.proceso;
@@ -41,7 +40,7 @@ import static py.com.bepsa.utils.Utils.obtenerFechaHora;
  */
 public class DBUtils {
 
-    private static final Logger LOGGER = LogManager.getLogger(DBUtils.class);
+    private static final Logger LOGGER = Logger.getLogger(DBUtils.class);
 
     @SuppressWarnings("finally")
     public static long getSecuencia(String query, Connection conn) {

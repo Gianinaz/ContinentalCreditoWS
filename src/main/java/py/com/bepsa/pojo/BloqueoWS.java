@@ -5,9 +5,6 @@
  */
 package py.com.bepsa.pojo;
 
-import javax.jws.WebParam;
-import javax.xml.bind.annotation.XmlElement;
-
 public class BloqueoWS {
 
     String TrjNro;

@@ -16,8 +16,7 @@ import com.ibm.as400.access.ProgramCall;
 import com.ibm.as400.access.ProgramParameter;
 import com.ibm.as400.access.QSYSObjectPathName;
 import java.sql.Connection;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.DatoTmoviaf;
 import py.com.bepsa.clases.RespPagoTC;
 import py.com.bepsa.utils.DBUtils;
@@ -29,7 +28,7 @@ import py.com.bepsa.utils.Utils;
  */
 public class PagoReversaManager {
 
-    private static final Logger LOGGER = LogManager.getLogger(PagoReversaManager.class);
+    private static final Logger LOGGER = Logger.getLogger(PagoReversaManager.class.getName());
 
     public static RespPagoTC procesar(String tarjeta, String operacion, String importe, String pedido, String user) {
         RespPagoTC retorno = new RespPagoTC();

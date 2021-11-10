@@ -10,15 +10,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import py.com.bepsa.clases.Cuenta;
 import py.com.bepsa.clases.Tarjeta;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author rarce
  */
 public class ErrorUtils {
-    private static final Logger LOGGER = LogManager.getLogger(ErrorUtils.class);
+    private static final Logger LOGGER = Logger.getLogger(ErrorUtils.class);
     
     public static ErrorCuenta validarDatosCta (Cuenta cta) {
         ErrorCuenta ctaVerificada = new ErrorCuenta();

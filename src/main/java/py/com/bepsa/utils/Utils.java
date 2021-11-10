@@ -14,8 +14,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Properties;
 import java.util.logging.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.BepCypher;
 
 /**
@@ -62,7 +61,7 @@ public class Utils {
     public static String default_schemma;
     public static String usrAS400;
     public static String passAS400;
-    private static final Logger LOGGER = LogManager.getLogger(Utils.class);
+    private static final Logger LOGGER = Logger.getLogger(Utils.class);
 
     public static void obtenerPropiedades() {
         try {

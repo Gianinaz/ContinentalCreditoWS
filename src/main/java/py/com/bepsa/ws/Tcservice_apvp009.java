@@ -9,8 +9,7 @@ import java.util.Date;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.RespPagoTC;
 import py.com.bepsa.managers.PagoReversaManager;
 import static py.com.bepsa.utils.DBUtils.existNroBin;
@@ -25,7 +24,7 @@ import py.com.bepsa.utils.Utils;
 @WebService(serviceName = "tcservice_apvp009")
 public class Tcservice_apvp009 {
 
-    private static final Logger LOGGER = LogManager.getLogger(Tcservice_apvp009.class);
+    private static final Logger LOGGER = Logger.getLogger(Tcservice_apvp009.class);
 
     @WebMethod(operationName = "pagoTC")
     public RespPagoTC pagoTC(@WebParam(name = "usuario") String usuario,

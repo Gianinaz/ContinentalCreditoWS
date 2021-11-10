@@ -23,8 +23,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.RespActivacion;
 import py.com.bepsa.pojo.DatoTembsaf;
 import py.com.bepsa.pojo.DatoTmctaaf;
@@ -46,7 +45,7 @@ import py.com.bepsa.utils.Utils;
  */
 public class ActivacionManager {
 
-    private static final Logger LOGGER = LogManager.getLogger(ActivacionManager.class);
+    private static final Logger LOGGER = Logger.getLogger(ActivacionManager.class.getName());
 
     public static RespActivacion procesar(String cuenta, String tarjeta, String cobraCosto, String importe, String user) {
         String fecha = Utils.obtenerFechaHora("yyyyMMdd");

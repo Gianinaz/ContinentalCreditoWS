@@ -9,8 +9,7 @@ import java.util.Date;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.RespActivacion;
 import py.com.bepsa.managers.ActivacionManager;
 import static py.com.bepsa.utils.DBUtils.existNroBin;
@@ -25,7 +24,7 @@ import py.com.bepsa.utils.Utils;
 @WebService(serviceName = "tcservice_apvp932")
 public class Tcservice_apvp932 {
 
-    private static final Logger LOGGER = LogManager.getLogger(Tcservice_apvp932.class);
+    private static final Logger LOGGER = Logger.getLogger(Tcservice_apvp932.class);
 
     @WebMethod(operationName = "activacionTC")
     public RespActivacion activacionTC(@WebParam(name = "usuario") String usuario,

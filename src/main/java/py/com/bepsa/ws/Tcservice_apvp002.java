@@ -9,8 +9,7 @@ import java.util.Date;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import py.com.bepsa.clases.RespExtracto;
 import static py.com.bepsa.managers.ExtractoManager.procesar;
 import static py.com.bepsa.utils.DBUtils.existNroBin;
@@ -24,7 +23,7 @@ import py.com.bepsa.utils.Utils;
 @WebService(serviceName = "tcservice_apvp002")
 public class Tcservice_apvp002 {
 
-    private static final Logger LOGGER = LogManager.getLogger(Tcservice_apvp002.class);
+    private static final Logger LOGGER = Logger.getLogger(Tcservice_apvp002.class);
 
     @WebMethod(operationName = "extractoTC")
     public RespExtracto extractoTC(@WebParam(name = "usuario") String usuario,
